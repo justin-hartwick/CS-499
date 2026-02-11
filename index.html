@@ -4,170 +4,255 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Justin Hartwick | CS 499 ePortfolio</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      line-height: 1.6;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 24px;
+    }
+    h1, h2, h3 {
+      line-height: 1.25;
+    }
+    .muted {
+      color: #444;
+    }
+    .small {
+      font-size: 0.95rem;
+    }
+    .section {
+      margin-top: 28px;
+    }
+    .card {
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      padding: 16px 18px;
+      margin-top: 14px;
+      background: #fafafa;
+    }
+    a {
+      color: #0b57d0;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    hr {
+      margin: 28px 0;
+      border: 0;
+      border-top: 1px solid #ddd;
+    }
+    ul {
+      margin-top: 8px;
+    }
+  </style>
 </head>
 <body>
 
-  <h1>Justin Hartwick</h1>
-  <h2>Computer Science ePortfolio</h2>
+  <header>
+    <h1>Justin Hartwick</h1>
+    <h2 class="muted">Computer Science ePortfolio (CS 499)</h2>
 
-  <p>
-    This ePortfolio showcases selected artifacts from my coursework in the
-    Computer Science program at Southern New Hampshire University. It highlights
-    my growth across software engineering, algorithms and data structures,
-    databases, and secure application development.
-  </p>
+    <p class="small">
+      This ePortfolio showcases selected artifacts from my coursework in the
+      Computer Science program at Southern New Hampshire University. It highlights
+      my growth across software engineering, algorithms and data structures,
+      databases, and secure application development.
+    </p>
 
-  <p><strong>Last updated:</strong> Feb 2026</p>
-
-  <hr>
-
-  <h2>Professional Introduction</h2>
-  <p>
-    (This section will contain my professional self-assessment. It will introduce my
-    professional goals, strengths, and how the artifacts below work together to
-    demonstrate growth across the Computer Science program.)
-  </p>
+    <p class="small"><strong>Last updated:</strong> Feb 2026</p>
+  </header>
 
   <hr>
 
-  <h2>Informal Code Review</h2>
-  <p>
-    The following informal code review examines an existing software artifact
-    created earlier in the program. The review discusses the current functionality
-    of the code, identifies areas for improvement, and outlines planned
-    enhancements aligned with CS 499 course outcomes.
-  </p>
+  <section class="section" id="self-assessment">
+    <h2>Professional Self-Assessment</h2>
 
-  <div style="max-width: 800px;">
-    <iframe width="100%" height="450"
-      src="https://www.youtube.com/embed/Fdc4tR0LeXI"
-      title="CS 499 Code Review"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
+    <div class="card">
+      <p>
+        When I began the Computer Science program, I was interested in technology in a general sense.
+        Over time, that interest became more focused. Through coursework and the process of building
+        this ePortfolio, I realized that I am most interested in infrastructure and enterprise-level
+        systems, especially in structured environments such as state or public sector organizations.
+        I am drawn to systems that need to be reliable, secure, and carefully designed rather than built
+        quickly and revised later.
+      </p>
 
-  <hr>
+      <p>
+        Throughout the program, I developed the ability to think about computing systems beyond just
+        whether they function. In projects involving databases, service layers, and full-stack development,
+        I learned to evaluate structure, maintainability, and long-term impact. In CS 499, enhancing previous
+        artifacts required me to step back and analyze my own design decisions. I identified areas where
+        modularity could be improved, where efficiency could be refined, and where documentation could better
+        support collaboration. This process reflects the program outcome of designing and evaluating computing
+        solutions while managing trade-offs in structure and performance.
+      </p>
 
-  <h2>Artifact 1: Software Design and Engineering</h2>
+      <p>
+        Communication has also been an important area of growth. In discussion assignments and the informal code
+        review video, I practiced explaining technical concepts in a way that made sense to different audiences.
+        Whether discussing neural networks, reinforcement learning, or bias in AI systems, I focused on clarity
+        and context rather than assuming technical knowledge. In professional environments, especially in enterprise
+        or public systems, the ability to communicate clearly with managers, stakeholders, and team members is essential.
+        The code review process in particular helped me strengthen my ability to justify design decisions and explain
+        planned enhancements logically and professionally.
+      </p>
 
-  <p>
-    This artifact is based on a project originally created in CS 340: Advanced Programming Concepts.
-    The application was designed to manage and query animal shelter data using a MongoDB backend
-    and a Python-based service layer. The original version focused on core CRUD functionality
-    and correct interaction with the database.
-  </p>
+      <p>
+        My understanding of algorithms and data structures deepened as I examined efficiency, state-based models,
+        and optimization strategies. In reinforcement learning discussions, I analyzed how systems make decisions based
+        on states and rewards. In later modules, I evaluated how AI systems like AlphaGo Zero improved performance through
+        structured iteration and self-play. These experiences reinforced the importance of efficiency, scalability, and
+        careful evaluation of algorithmic design choices. Rather than seeing algorithms as abstract theory, I began viewing
+        them as practical tools that shape how systems behave under real constraints.
+      </p>
 
-  <p>
-    I selected this artifact for my ePortfolio because it demonstrates my ability to design
-    and structure a complete software solution using modular components. The enhancement
-    for this category focused on improving the overall design, readability, and maintainability
-    of the application. These changes included reorganizing functions for clearer separation
-    of responsibilities, improving naming conventions, and adding structured documentation
-    to better support future development and collaboration.
-  </p>
+      <p>
+        Security and accountability have become central to how I think about computing. In discussions about AI bias,
+        privacy regulations, and responsible research, I consistently questioned how systems affect users. I learned that
+        building software is not only about solving technical problems but also about anticipating unintended consequences.
+        This mindset carries into database design, input validation, and system architecture. Protecting data, minimizing
+        unnecessary exposure, and planning for future risks are especially important in enterprise and public-sector systems,
+        where trust and compliance matter.
+      </p>
 
-  <p>
-    Through this enhancement, I demonstrated software engineering skills such as modular design,
-    abstraction, and code organization. I also applied principles of the software development
-    lifecycle by evaluating the original design, identifying areas for improvement, and
-    implementing changes that improve long-term usability without altering core functionality.
-    This artifact aligns with course outcomes related to professional software design,
-    communication, and delivering maintainable computing solutions.
-  </p>
+      <p>
+        The artifacts in this portfolio reflect that progression. The software design and engineering enhancement demonstrates
+        improved modularity and structure. The algorithms and data structures enhancement focuses on computational reasoning
+        and efficiency. The database enhancement highlights structured data management and system integration. Together, these
+        artifacts show growth not only in technical implementation but also in design evaluation, communication, and security awareness.
+      </p>
 
-  <ul>
-    <li>
-      <strong>Project Repository:</strong>
-      <a href="https://github.com/justin-hartwick/CS340" target="_blank">
-        CS 340 Animal Shelter Project
-      </a>
-    </li>
-  </ul>
+      <p>
+        Completing the Computer Science program has shaped both my technical skill set and my professional goals.
+        I am interested in contributing to infrastructure and enterprise systems that require stability, careful planning,
+        and long-term accountability. I value environments where systems must work reliably, where decisions are documented,
+        and where security and privacy are treated as foundational rather than optional.
+      </p>
 
-  <hr>
+      <p>
+        This ePortfolio represents how I approach computing problems: analytically, thoughtfully, and with attention to long-term impact.
+        It reflects both what I have built and how I have learned to think as a computer science professional.
+      </p>
 
-  <h2>Artifact 2: Algorithms and Data Structures</h2>
-
-  <p>
-    This enhancement focused on improving query efficiency and analyzing algorithmic
-    performance within the CS 340 animal shelter dashboard project. The original system
-    relied on default query behavior without examining execution plans or implementing
-    indexing strategies.
-  </p>
-
-  <p>
-    During the enhancement process, I analyzed MongoDB query execution using the
-    <em>explain()</em> function. The results revealed a COLLSCAN (collection scan),
-    which performs a linear search across all documents. This approach has O(n)
-    time complexity and does not scale efficiently as data volume increases.
-  </p>
-
-  <h3>Figure 1 – Filtered Query Execution</h3>
-  <img src="assets/algorithms/figure1-filter-query.png" width="700">
-
-  <h3>Figure 2 – Index Structure</h3>
-  <img src="assets/algorithms/figure2-index-structure.png" width="700">
-
-  <h3>Figure 3 – Query Explain Plan</h3>
-  <img src="assets/algorithms/figure3-explain-plan.png" width="700">
-
-  <p>
-    By identifying the absence of an index on the <code>animal_type</code> field,
-    I demonstrated the impact of data structure design on performance. Introducing
-    indexing transforms query performance by reducing search complexity and
-    optimizing retrieval operations.
-  </p>
-
-  <p>
-    This enhancement demonstrates applied algorithmic principles, complexity analysis,
-    and performance evaluation. It reflects my ability to evaluate computing solutions,
-    identify inefficiencies, and implement improvements while understanding the trade-offs
-    between query speed, storage overhead, and index maintenance costs.
-  </p>
-
-  <ul>
-    <li>
-      <strong>Milestone Three Narrative:</strong>
-      <a href="documents/Module%204%20Milestone%203%20narrative.docx" target="_blank">
-        View Narrative Document
-      </a>
-    </li>
-  </ul>
+      <p>
+        This portfolio demonstrates my achievement of the program learning outcomes. Through code reviews and structured enhancements,
+        I practiced building collaborative environments and supporting stakeholder decision making. By presenting artifacts, narratives,
+        and visual demonstrations, I strengthened my professional written and oral communication skills. My enhancements required designing
+        and evaluating computing solutions using algorithmic principles while managing design trade-offs in performance and structure.
+        I applied industry-relevant tools and techniques, including full-stack development, database integration, and modular architecture.
+        Finally, I developed a stronger security mindset by emphasizing data validation, privacy considerations, and responsible system design
+        throughout my projects.
+      </p>
+    </div>
+  </section>
 
   <hr>
 
-  <h2>Artifact 3: Databases</h2>
-  <p>
-    (Artifact description and reflection will be added in the final milestone.)
-  </p>
+  <section class="section" id="code-review">
+    <h2>Informal Code Review</h2>
+    <p>
+      The following informal code review examines an existing software artifact created earlier in the program.
+      The review discusses the current functionality of the code, identifies areas for improvement, and outlines planned
+      enhancements aligned with CS 499 course outcomes.
+    </p>
+
+    <div style="max-width: 900px;">
+      <iframe width="100%" height="450"
+        src="https://www.youtube.com/embed/Fdc4tR0LeXI"
+        title="CS 499 Code Review"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen>
+      </iframe>
+    </div>
+  </section>
 
   <hr>
 
-  <h2>Milestone Documents</h2>
-  <ul>
-    <li>
-      <a href="documents/Module%202%20journal.docx" target="_blank">
-        Module 2 Journal
-      </a>
-    </li>
-    <li>
-      <a href="documents/Module%203%20Milestone%202%20narrative.docx" target="_blank">
-        Milestone Two: Software Design and Engineering
-      </a>
-    </li>
-    <li>
-      <a href="documents/Module%204%20Milestone%203%20narrative.docx" target="_blank">
-        Milestone Three: Algorithms and Data Structures
-      </a>
-    </li>
-    <li>
-      <a href="documents/CS%20499%20Milestone%20Four%20Narrative.docx" target="_blank">
-        Milestone Four: Databases
-      </a>
-    </li>
-  </ul>
+  <section class="section" id="artifact-1">
+    <h2>Artifact 1: Software Design and Engineering</h2>
+
+    <div class="card">
+      <p>
+        This artifact is based on a project originally created in CS 340: Advanced Programming Concepts.
+        The application was designed to manage and query animal shelter data using a MongoDB backend and a Python-based
+        service layer. The original version focused on core CRUD functionality and correct interaction with the database.
+      </p>
+
+      <p>
+        I selected this artifact for my ePortfolio because it demonstrates my ability to design and structure a complete
+        software solution using modular components. The enhancement for this category focused on improving the overall design,
+        readability, and maintainability of the application. These changes included reorganizing functions for clearer separation
+        of responsibilities, improving naming conventions, and adding structured documentation to better support future development
+        and collaboration.
+      </p>
+
+      <p>
+        Through this enhancement, I demonstrated software engineering skills such as modular design, abstraction, and code organization.
+        I also applied principles of the software development lifecycle by evaluating the original design, identifying areas for improvement,
+        and implementing changes that improve long-term usability without altering core functionality.
+      </p>
+
+      <ul>
+        <li>
+          <strong>Project Repository:</strong>
+          <a href="https://github.com/justin-hartwick/CS340" target="_blank" rel="noopener noreferrer">
+            CS 340 Animal Shelter Project
+          </a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="section" id="artifact-2">
+    <h2>Artifact 2: Algorithms and Data Structures</h2>
+    <div class="card">
+      <p>
+        (Artifact description and reflection will be added here in a later milestone.)
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="artifact-3">
+    <h2>Artifact 3: Databases</h2>
+    <div class="card">
+      <p>
+        (Artifact description and reflection will be added here in a later milestone.)
+      </p>
+    </div>
+  </section>
+
+  <hr>
+
+  <section class="section" id="milestones">
+    <h2>Milestone Documents</h2>
+    <ul>
+      <li>
+        <a href="milestones/Module%202%20Milestone%201.docx" target="_blank" rel="noopener noreferrer">
+          Milestone One: Code Review
+        </a>
+      </li>
+      <li>
+        <a href="milestones/Module%203%20Milestone%202%20narrative.docx" target="_blank" rel="noopener noreferrer">
+          Milestone Two: Software Design and Engineering
+        </a>
+      </li>
+      <li>
+        <a href="milestones/Module%204%20Milestone%203%20narrative.docx" target="_blank" rel="noopener noreferrer">
+          Milestone Three: Algorithms and Data Structures
+        </a>
+      </li>
+      <li>
+        <a href="milestones/CS%20499%20Milestone%20Four%20Narrative.docx" target="_blank" rel="noopener noreferrer">
+          Milestone Four: Databases
+        </a>
+      </li>
+    </ul>
+  </section>
 
 </body>
 </html>
