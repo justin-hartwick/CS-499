@@ -84,14 +84,72 @@
         CS 340 Animal Shelter Project
       </a>
     </li>
+    <li>
+      <strong>Enhanced Artifact (ZIP):</strong>
+      <a href="artifacts/CS340_Dashboard_Enhanced.zip" target="_blank">
+        Download CS340 Dashboard Enhanced (Design)
+      </a>
+    </li>
   </ul>
 
   <hr>
 
   <h2>Artifact 2: Algorithms and Data Structures</h2>
+
   <p>
-    (Artifact description and reflection will be added here in a later milestone.)
+    This enhancement builds on the same CS 340 MongoDB dashboard project, but focuses on
+    algorithmic efficiency and the impact of data structures on performance. Specifically, I analyzed
+    how MongoDB executes filtered queries when an index is not available, and I used query execution
+    plans to identify when the database was forced to scan the entire collection.
   </p>
+
+  <p>
+    Using MongoDB Compass, I executed filtered searches and reviewed the explain plan output. When
+    no index existed for the target field, the explain plan showed a <strong>COLLSCAN</strong>
+    operation. This reflects linear search behavior, where performance scales proportionally with the
+    number of documents in the collection. By identifying the missing index and documenting the results,
+    the artifact demonstrates how indexing serves as an important data structure that improves efficiency
+    and scalability.
+  </p>
+
+  <p>
+    This artifact aligns with course outcomes related to designing and evaluating computing solutions
+    using algorithmic principles. It also demonstrates my ability to interpret execution metrics, explain
+    trade-offs in design decisions, and communicate technical findings with clear evidence.
+  </p>
+
+  <h3>Evidence (Screenshots)</h3>
+
+  <div style="max-width: 900px;">
+    <h4>Figure 1: Filtered Query Executed Without an Index</h4>
+    <img src="assets/algorithms/figure1-filter-query.png" alt="Filtered query executed without an index"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+
+    <h4>Figure 2: Index View / Index Structure</h4>
+    <img src="assets/algorithms/figure2-index-structure.png" alt="Index view showing current indexes"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+
+    <h4>Figure 3: Explain Plan Showing Collection Scan (COLLSCAN)</h4>
+    <img src="assets/algorithms/figure3-explain-plan.png" alt="Explain plan output demonstrating COLLSCAN"
+         style="max-width: 100%; height: auto; border: 1px solid #ccc;">
+  </div>
+
+  <ul>
+    <li>
+      <strong>Milestone Three Narrative:</strong>
+      <a href="documents/Module 4 Milestone 3 narrative.docx" target="_blank">
+        Download Narrative (Algorithms and Data Structures)
+      </a>
+    </li>
+    <li>
+      <strong>Enhanced Artifact (ZIP):</strong>
+      <a href="artifacts/CS340_Dashboard_Enhanced.zip" target="_blank">
+        Download CS340 Dashboard Enhanced (Algorithms Evidence Included)
+      </a>
+    </li>
+  </ul>
+
+  <hr>
 
   <h2>Artifact 3: Databases</h2>
   <p>
@@ -103,23 +161,33 @@
   <h2>Milestone Documents</h2>
   <ul>
     <li>
-      <a href="milestones/Module%202%20Milestone%201.docx" target="_blank">
-        Milestone One: Code Review
+      <a href="documents/Module 2 journal.docx" target="_blank">
+        Module Two Journal
       </a>
     </li>
     <li>
-      <a href="milestones/Module%203%20Milestone%202%20narrative.docx" target="_blank">
-        Milestone Two: Software Design and Engineering
+      <a href="documents/Module 3 Milestone 2 narrative.docx" target="_blank">
+        Milestone Two: Software Design and Engineering Narrative
       </a>
     </li>
     <li>
-      <a href="milestones/Module%204%20Milestone%203%20narrative.docx" target="_blank">
-        Milestone Three: Algorithms and Data Structures
+      <a href="documents/Module 4 Milestone 3 narrative.docx" target="_blank">
+        Milestone Three: Algorithms and Data Structures Narrative
       </a>
     </li>
     <li>
-      <a href="milestones/CS%20499%20Milestone%20Four%20Narrative.docx" target="_blank">
-        Milestone Four: Databases
+      <a href="documents/CS 499 Milestone Four Narrative.docx" target="_blank">
+        Milestone Four: Databases Narrative
+      </a>
+    </li>
+    <li>
+      <a href="documents/Module 4 journal.docx" target="_blank">
+        Module Four Journal
+      </a>
+    </li>
+    <li>
+      <a href="documents/Module 5 journal.docx" target="_blank">
+        Module Five Journal
       </a>
     </li>
   </ul>
