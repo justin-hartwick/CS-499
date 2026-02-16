@@ -31,6 +31,7 @@
       border-top: 1px solid #ddd;
     }
     ul { margin-top: 8px; }
+
     .grid {
       display: grid;
       grid-template-columns: 1fr;
@@ -39,6 +40,7 @@
     @media (min-width: 820px) {
       .grid { grid-template-columns: 1fr 1fr; }
     }
+
     .tag {
       display: inline-block;
       padding: 2px 8px;
@@ -67,11 +69,87 @@
       color: #444;
       margin-top: 6px;
     }
+
+    /* Navigation + UX */
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 10px;
+      background: #fff;
+      border: 1px solid #ddd;
+      padding: 8px 10px;
+      border-radius: 8px;
+      z-index: 9999;
+    }
+    .skip-link:focus { left: 10px; }
+
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 10px 12px;
+      margin: 16px 0 18px 0;
+      backdrop-filter: blur(6px);
+    }
+    .nav .row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .nav .links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+    .nav a {
+      display: inline-block;
+      padding: 6px 10px;
+      border-radius: 999px;
+      border: 1px solid #e6e6e6;
+      background: #fff;
+      font-size: 0.95rem;
+    }
+    .nav a:hover { text-decoration: none; border-color: #cfcfcf; }
+
+    .toplink {
+      display: inline-block;
+      margin-top: 12px;
+      font-size: 0.92rem;
+    }
+
+    .summary {
+      margin-top: 12px;
+      padding: 12px 12px;
+      border: 1px solid #e6e6e6;
+      border-radius: 10px;
+      background: #fff;
+    }
+    .summary h3 {
+      margin: 0 0 6px 0;
+      font-size: 1.05rem;
+    }
+    .summary p { margin: 0; }
+    .summary ul { margin: 8px 0 0 18px; }
+
+    code {
+      background: #fff;
+      border: 1px solid #e6e6e6;
+      padding: 0 4px;
+      border-radius: 6px;
+    }
   </style>
 </head>
 <body>
 
-  <header>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header id="top">
     <h1>Justin Hartwick</h1>
     <h2 class="muted">Computer Science ePortfolio (CS 499)</h2>
 
@@ -82,341 +160,418 @@
     </p>
 
     <p class="small"><strong>Last updated:</strong> Feb 2026</p>
+
+    <nav class="nav" aria-label="Primary">
+      <div class="row">
+        <div class="links">
+          <a href="#self-assessment">Self-Assessment</a>
+          <a href="#code-review">Code Review</a>
+          <a href="#artifact-1">Artifact 1</a>
+          <a href="#artifact-2">Artifact 2</a>
+          <a href="#artifact-3">Artifact 3</a>
+          <a href="#milestones">Milestones</a>
+        </div>
+        <div class="links">
+          <a href="#top" aria-label="Back to top">Top ↑</a>
+        </div>
+      </div>
+    </nav>
   </header>
 
-  <hr>
+  <main id="main">
 
-  <section class="section" id="self-assessment">
-    <h2>Professional Self-Assessment</h2>
+    <section class="section" id="self-assessment">
+      <h2>Professional Self-Assessment</h2>
 
-    <div class="card">
+      <div class="card">
+        <p>
+          When I began the Computer Science program, I was interested in technology in a general sense.
+          Over time, that interest became more focused. Through coursework and the process of building
+          this ePortfolio, I realized that I am most interested in infrastructure and enterprise-level
+          systems, especially in structured environments such as state or public sector organizations.
+          I am drawn to systems that need to be reliable, secure, and carefully designed rather than built
+          quickly and revised later.
+        </p>
+
+        <p>
+          Throughout the program, I developed the ability to think about computing systems beyond just
+          whether they function. In projects involving databases, service layers, and full-stack development,
+          I learned to evaluate structure, maintainability, and long-term impact. In CS 499, enhancing previous
+          artifacts required me to step back and analyze my own design decisions. I identified areas where
+          modularity could be improved, where efficiency could be refined, and where documentation could better
+          support collaboration. This process reflects the program outcome of designing and evaluating computing
+          solutions while managing trade-offs in structure and performance.
+        </p>
+
+        <p>
+          Communication has also been an important area of growth. In discussion assignments and the informal code
+          review video, I practiced explaining technical concepts in a way that made sense to different audiences.
+          Whether discussing neural networks, reinforcement learning, or bias in AI systems, I focused on clarity
+          and context rather than assuming technical knowledge. In professional environments, especially in enterprise
+          or public systems, the ability to communicate clearly with managers, stakeholders, and team members is essential.
+          The code review process in particular helped me strengthen my ability to justify design decisions and explain
+          planned enhancements logically and professionally.
+        </p>
+
+        <p>
+          My understanding of algorithms and data structures deepened as I examined efficiency, state-based models,
+          and optimization strategies. In reinforcement learning discussions, I analyzed how systems make decisions based
+          on states and rewards. In later modules, I evaluated how AI systems like AlphaGo Zero improved performance through
+          structured iteration and self-play. These experiences reinforced the importance of efficiency, scalability, and
+          careful evaluation of algorithmic design choices. Rather than seeing algorithms as abstract theory, I began viewing
+          them as practical tools that shape how systems behave under real constraints.
+        </p>
+
+        <p>
+          Security and accountability have become central to how I think about computing. In discussions about AI bias,
+          privacy regulations, and responsible research, I consistently questioned how systems affect users. I learned that
+          building software is not only about solving technical problems but also about anticipating unintended consequences.
+          This mindset carries into database design, input validation, and system architecture. Protecting data, minimizing
+          unnecessary exposure, and planning for future risks are especially important in enterprise and public-sector systems,
+          where trust and compliance matter.
+        </p>
+
+        <p>
+          The artifacts in this portfolio reflect that progression. The software design and engineering enhancement demonstrates
+          improved modularity and structure. The algorithms and data structures enhancement focuses on computational reasoning
+          and efficiency. The database enhancement highlights structured data management and system integration. Together, these
+          artifacts show growth not only in technical implementation but also in design evaluation, communication, and security awareness.
+        </p>
+
+        <p>
+          Completing the Computer Science program has shaped both my technical skill set and my professional goals.
+          I am interested in contributing to infrastructure and enterprise systems that require stability, careful planning,
+          and long-term accountability. I value environments where systems must work reliably, where decisions are documented,
+          and where security and privacy are treated as foundational rather than optional.
+        </p>
+
+        <p>
+          This ePortfolio represents how I approach computing problems: analytically, thoughtfully, and with attention to long-term impact.
+          It reflects both what I have built and how I have learned to think as a computer science professional.
+        </p>
+
+        <p>
+          This portfolio demonstrates my achievement of the program learning outcomes. Through code reviews and structured enhancements,
+          I practiced building collaborative environments and supporting stakeholder decision making. By presenting artifacts, narratives,
+          and visual demonstrations, I strengthened my professional written and oral communication skills. My enhancements required designing
+          and evaluating computing solutions using algorithmic principles while managing design trade-offs in performance and structure.
+          I applied industry-relevant tools and techniques, including full-stack development, database integration, and modular architecture.
+          Finally, I developed a stronger security mindset by emphasizing data validation, privacy considerations, and responsible system design
+          throughout my projects.
+        </p>
+
+        <a class="toplink" href="#top">Back to top ↑</a>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="section" id="code-review">
+      <h2>Informal Code Review</h2>
       <p>
-        When I began the Computer Science program, I was interested in technology in a general sense.
-        Over time, that interest became more focused. Through coursework and the process of building
-        this ePortfolio, I realized that I am most interested in infrastructure and enterprise-level
-        systems, especially in structured environments such as state or public sector organizations.
-        I am drawn to systems that need to be reliable, secure, and carefully designed rather than built
-        quickly and revised later.
+        This informal code review examines an existing software artifact created earlier in the program.
+        The review discusses the current functionality of the code, identifies areas for improvement, and outlines planned
+        enhancements aligned with CS 499 course outcomes.
       </p>
 
-      <p>
-        Throughout the program, I developed the ability to think about computing systems beyond just
-        whether they function. In projects involving databases, service layers, and full-stack development,
-        I learned to evaluate structure, maintainability, and long-term impact. In CS 499, enhancing previous
-        artifacts required me to step back and analyze my own design decisions. I identified areas where
-        modularity could be improved, where efficiency could be refined, and where documentation could better
-        support collaboration. This process reflects the program outcome of designing and evaluating computing
-        solutions while managing trade-offs in structure and performance.
-      </p>
-
-      <p>
-        Communication has also been an important area of growth. In discussion assignments and the informal code
-        review video, I practiced explaining technical concepts in a way that made sense to different audiences.
-        Whether discussing neural networks, reinforcement learning, or bias in AI systems, I focused on clarity
-        and context rather than assuming technical knowledge. In professional environments, especially in enterprise
-        or public systems, the ability to communicate clearly with managers, stakeholders, and team members is essential.
-        The code review process in particular helped me strengthen my ability to justify design decisions and explain
-        planned enhancements logically and professionally.
-      </p>
-
-      <p>
-        My understanding of algorithms and data structures deepened as I examined efficiency, state-based models,
-        and optimization strategies. In reinforcement learning discussions, I analyzed how systems make decisions based
-        on states and rewards. In later modules, I evaluated how AI systems like AlphaGo Zero improved performance through
-        structured iteration and self-play. These experiences reinforced the importance of efficiency, scalability, and
-        careful evaluation of algorithmic design choices. Rather than seeing algorithms as abstract theory, I began viewing
-        them as practical tools that shape how systems behave under real constraints.
-      </p>
-
-      <p>
-        Security and accountability have become central to how I think about computing. In discussions about AI bias,
-        privacy regulations, and responsible research, I consistently questioned how systems affect users. I learned that
-        building software is not only about solving technical problems but also about anticipating unintended consequences.
-        This mindset carries into database design, input validation, and system architecture. Protecting data, minimizing
-        unnecessary exposure, and planning for future risks are especially important in enterprise and public-sector systems,
-        where trust and compliance matter.
-      </p>
-
-      <p>
-        The artifacts in this portfolio reflect that progression. The software design and engineering enhancement demonstrates
-        improved modularity and structure. The algorithms and data structures enhancement focuses on computational reasoning
-        and efficiency. The database enhancement highlights structured data management and system integration. Together, these
-        artifacts show growth not only in technical implementation but also in design evaluation, communication, and security awareness.
-      </p>
-
-      <p>
-        Completing the Computer Science program has shaped both my technical skill set and my professional goals.
-        I am interested in contributing to infrastructure and enterprise systems that require stability, careful planning,
-        and long-term accountability. I value environments where systems must work reliably, where decisions are documented,
-        and where security and privacy are treated as foundational rather than optional.
-      </p>
-
-      <p>
-        This ePortfolio represents how I approach computing problems: analytically, thoughtfully, and with attention to long-term impact.
-        It reflects both what I have built and how I have learned to think as a computer science professional.
-      </p>
-
-      <p>
-        This portfolio demonstrates my achievement of the program learning outcomes. Through code reviews and structured enhancements,
-        I practiced building collaborative environments and supporting stakeholder decision making. By presenting artifacts, narratives,
-        and visual demonstrations, I strengthened my professional written and oral communication skills. My enhancements required designing
-        and evaluating computing solutions using algorithmic principles while managing design trade-offs in performance and structure.
-        I applied industry-relevant tools and techniques, including full-stack development, database integration, and modular architecture.
-        Finally, I developed a stronger security mindset by emphasizing data validation, privacy considerations, and responsible system design
-        throughout my projects.
-      </p>
-    </div>
-  </section>
-
-  <hr>
-
-  <section class="section" id="code-review">
-    <h2>Informal Code Review</h2>
-    <p>
-      This informal code review examines an existing software artifact created earlier in the program.
-      The review discusses the current functionality of the code, identifies areas for improvement, and outlines planned
-      enhancements aligned with CS 499 course outcomes.
-    </p>
-
-    <div style="max-width: 900px;">
-      <iframe width="100%" height="450"
-        src="https://www.youtube.com/embed/Fdc4tR0LeXI"
-        title="CS 499 Code Review"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen>
-      </iframe>
-    </div>
-  </section>
-
-  <hr>
-
-  <!-- ARTIFACT 1 -->
-  <section class="section" id="artifact-1">
-    <h2>Artifact 1: Software Design and Engineering</h2>
-
-    <div class="card">
-      <p>
-        This artifact is an Animal Shelter Dashboard originally created in CS 340. The application uses a MongoDB database
-        containing animal shelter outcome data and a Python-based application layer to query and display filtered results.
-        The original version focused on core CRUD behavior and correct client/server interaction with the database.
-      </p>
-
-      <p>
-        I selected this artifact for my ePortfolio because it demonstrates my ability to design and structure a complete solution
-        using modular components. For the software design and engineering enhancement, I focused on improving clarity and maintainability
-        through modular organization, clearer separation of concerns, and improved documentation so the project is easier to understand
-        and extend in a collaborative environment.
-      </p>
-
-      <div>
-        <span class="tag">Modularity</span>
-        <span class="tag">Separation of concerns</span>
-        <span class="tag">Maintainability</span>
-        <span class="tag">Documentation</span>
+      <div class="summary">
+        <h3>What this code review covers</h3>
+        <p class="muted">
+          The walkthrough highlights how the original dashboard code functions, where improvements were needed, and how the planned
+          enhancements align with software design, efficiency, database practices, and security considerations.
+        </p>
       </div>
 
-      <!-- Evidence Screenshot -->
-      <div class="evidence">
-        <h3 style="margin-bottom: 6px;">Evidence</h3>
-        <figure>
-          <img class="screenshot"
-               src="assets/dashboard-main-view.png"
-               alt="Animal Shelter Dashboard (main view)">
-          <figcaption>
-            Animal Shelter Dashboard: main view showing the interactive table and map visualization.
-          </figcaption>
-        </figure>
+      <div style="max-width: 900px; margin-top: 12px;">
+        <iframe width="100%" height="450"
+          src="https://www.youtube.com/embed/Fdc4tR0LeXI"
+          title="CS 499 Code Review"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen>
+        </iframe>
       </div>
 
-      <ul>
-        <li>
-          <strong>Original Artifact (ZIP):</strong>
-          <a href="artifacts/CS340_Dashboard_Original.zip" target="_blank" rel="noopener noreferrer">
-            Download Original Version
-          </a>
-        </li>
-        <li>
-          <strong>Enhanced Artifact (ZIP):</strong>
-          <a href="artifacts/CS340_Dashboard_Enhanced.zip" target="_blank" rel="noopener noreferrer">
-            Download Enhanced Version
-          </a>
-        </li>
-        <li>
-          <strong>Project Repository (Original Development):</strong>
-          <a href="https://github.com/justin-hartwick/CS340" target="_blank" rel="noopener noreferrer">
-            View CS 340 Animal Shelter Repository
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
+      <a class="toplink" href="#top">Back to top ↑</a>
+    </section>
 
-  <hr>
+    <hr>
 
-  <!-- ARTIFACT 2 -->
-  <section class="section" id="artifact-2">
-    <h2>Artifact 2: Algorithms and Data Structures</h2>
+    <!-- ARTIFACT 1 -->
+    <section class="section" id="artifact-1">
+      <h2>Artifact 1: Software Design and Engineering</h2>
 
-    <div class="card">
-      <p>
-        The artifact selected for this enhancement is a MongoDB-based dashboard application originally created during my CS 340 coursework.
-        The project uses a MongoDB database containing animal shelter outcome data and a Python-based application layer to query and display
-        filtered results. The artifact was originally developed to demonstrate basic CRUD functionality and database interaction. For this
-        milestone, the artifact was enhanced to focus specifically on query execution behavior, algorithmic efficiency, and the impact of data
-        structures such as indexes on performance.
-      </p>
+      <div class="card">
+        <p>
+          This artifact is an Animal Shelter Dashboard originally created in CS 340. The application uses a MongoDB database
+          containing animal shelter outcome data and a Python-based application layer to query and display filtered results.
+          The original version focused on core CRUD behavior and correct client/server interaction with the database.
+        </p>
 
-      <p>
-        I selected this artifact for my ePortfolio because it provides a clear and practical demonstration of algorithmic principles applied
-        in a real-world database context. While the application itself is relatively simple, the underlying query behavior highlights important
-        concepts related to algorithms and data structures, including linear search, indexing, and performance trade-offs.
-      </p>
+        <p>
+          I selected this artifact for my ePortfolio because it demonstrates my ability to design and structure a complete solution
+          using modular components. For the software design and engineering enhancement, I focused on improving clarity and maintainability
+          through modular organization, clearer separation of concerns, and improved documentation so the project is easier to understand
+          and extend in a collaborative environment.
+        </p>
 
-      <p>
-        The enhancement focused on analyzing how MongoDB executes queries when an index is not present. Using MongoDB Compass, I executed a
-        filtered query on the <code>animal_type</code> field and examined the resulting execution plan. The explain plan showed a collection scan
-        (COLLSCAN), meaning every document in the collection was examined to locate matching results. This behavior directly reflects a linear
-        search algorithm, where time complexity increases proportionally with dataset size.
-      </p>
-
-      <p>
-        This artifact showcases my ability to analyze algorithmic efficiency, interpret execution metrics, and evaluate how data structures such
-        as indexes can significantly improve performance. By identifying the absence of an index and observing its effect on query execution,
-        the artifact was improved from a basic database interaction into a meaningful demonstration of algorithm and data structure concepts.
-      </p>
-
-      <p>
-        Enhancing this artifact reinforced the connection between theoretical algorithm concepts and practical implementation. Reviewing the explain
-        plan made it clear that fundamental principles such as linear search and indexing still apply, even when a database abstracts the low-level
-        mechanics. One challenge during this process was configuring the local MongoDB environment correctly, particularly managing authentication
-        and service settings. Troubleshooting these issues strengthened my understanding of system configuration and tool usage.
-      </p>
-
-      <!-- Evidence Screenshot -->
-      <div class="evidence">
-        <h3 style="margin-bottom: 6px;">Evidence</h3>
-        <figure>
-          <img class="screenshot"
-               src="assets/explain-plan-collscan.png"
-               alt="MongoDB explain plan showing COLLSCAN">
-          <figcaption>
-            MongoDB explain plan output showing a COLLSCAN, demonstrating linear-scan behavior when an index is not present.
-          </figcaption>
-        </figure>
-      </div>
-
-      <ul>
-        <li>
-          <strong>Milestone Three Narrative (DOCX):</strong>
-          <a href="documents/Module%204%20Milestone%203%20narrative.docx" target="_blank" rel="noopener noreferrer">
-            View Narrative
-          </a>
-        </li>
-      </ul>
-    </div>
-  </section>
-
-  <hr>
-
-  <!-- ARTIFACT 3 -->
-  <section class="section" id="artifact-3">
-    <h2>Artifact 3: Databases</h2>
-
-    <div class="card">
-      <p>
-        The artifact selected for this enhancement is an Animal Shelter Dashboard originally created for CS 340. The original version demonstrated
-        basic CRUD operations using MongoDB and displayed animal shelter data through a Python-based dashboard. For CS 499, this artifact was enhanced
-        to better demonstrate database design principles, secure data access, and efficient data retrieval practices.
-      </p>
-
-      <p>
-        The enhanced artifact consists of two primary components:
-      </p>
-      <ul>
-        <li><strong>MongoDB CRUD module</strong> (<code>CRUD_Python_Module.py</code>) that encapsulates database operations.</li>
-        <li><strong>Dash-based interactive dashboard</strong> (Jupyter notebook) that retrieves, displays, and visualizes database records.</li>
-      </ul>
-
-      <p>
-        This artifact was selected for inclusion in my ePortfolio because it demonstrates my ability to design, implement, and enhance database-driven
-        applications. It showcases practical database skills applicable to real-world development, including secure connections, structured data access,
-        and performance-aware querying.
-      </p>
-
-      <div class="grid">
-        <div>
-          <h3 style="margin-top: 0;">Key Database Enhancements</h3>
+        <div class="summary">
+          <h3>Narrative Summary</h3>
+          <p>
+            This enhancement focused on software design quality and maintainability. I improved organization and readability by separating
+            responsibilities more clearly, tightening documentation, and making the project easier to understand for someone new to the codebase.
+            These changes support long-term maintainability and help demonstrate how design decisions impact collaboration and future development.
+          </p>
           <ul>
-            <li><strong>Centralized CRUD abstraction:</strong> database access isolated behind a dedicated class for maintainability and scalability.</li>
-            <li><strong>Secure MongoDB authentication:</strong> authenticated connection with connectivity validation at startup.</li>
-            <li><strong>Efficient data retrieval:</strong> field projection and result limiting to reduce overhead and improve scalability.</li>
-            <li><strong>Interactive visualization:</strong> filterable table and map visualization tied to database records.</li>
+            <li><strong>Skills demonstrated:</strong> modular design, separation of concerns, documentation, maintainability</li>
+            <li><strong>Evidence:</strong> dashboard screenshot plus original/enhanced artifact downloads</li>
           </ul>
         </div>
+
         <div>
-          <h3 style="margin-top: 0;">What I Learned</h3>
-          <p>
-            Enhancing this artifact reinforced how database-level design decisions impact application performance and usability. Implementing projections
-            and limits highlighted the importance of retrieving only the data an application needs. A major challenge was diagnosing and resolving
-            authentication and connection issues, which strengthened my understanding of MongoDB security configuration and the value of validating
-            connectivity early in the application lifecycle.
-          </p>
-          <p class="small muted">
-            <strong>Evidence:</strong> Screenshot(s) referenced in the Milestone Four narrative.
-          </p>
+          <span class="tag">Modularity</span>
+          <span class="tag">Separation of concerns</span>
+          <span class="tag">Maintainability</span>
+          <span class="tag">Documentation</span>
         </div>
-      </div>
 
-      <!-- Evidence Screenshot -->
-      <div class="evidence">
-        <h3 style="margin-bottom: 6px;">Evidence</h3>
-        <figure>
-          <img class="screenshot"
-               src="assets/mongodb-indexes-view.png"
-               alt="MongoDB indexes view for animals collection">
-          <figcaption>
-            MongoDB indexes view for the animals collection, demonstrating the data structure support used for efficient query performance.
-          </figcaption>
-        </figure>
-      </div>
+        <!-- Evidence Screenshot -->
+        <div class="evidence">
+          <h3 style="margin-bottom: 6px;">Evidence</h3>
+          <figure>
+            <img class="screenshot"
+                 src="assets/dashboard-main-view.png"
+                 alt="Animal Shelter Dashboard (main view)">
+            <figcaption>
+              Animal Shelter Dashboard: main view showing the interactive table and map visualization.
+            </figcaption>
+          </figure>
+        </div>
 
+        <ul>
+          <li>
+            <strong>Original Artifact (ZIP):</strong>
+            <a href="artifacts/CS340_Dashboard_Original.zip" target="_blank" rel="noopener noreferrer">
+              Download Original Version
+            </a>
+          </li>
+          <li>
+            <strong>Enhanced Artifact (ZIP):</strong>
+            <a href="artifacts/CS340_Dashboard_Enhanced.zip" target="_blank" rel="noopener noreferrer">
+              Download Enhanced Version
+            </a>
+          </li>
+          <li>
+            <strong>Project Repository (Original Development):</strong>
+            <a href="https://github.com/justin-hartwick/CS340" target="_blank" rel="noopener noreferrer">
+              View CS 340 Animal Shelter Repository
+            </a>
+          </li>
+        </ul>
+
+        <a class="toplink" href="#top">Back to top ↑</a>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ARTIFACT 2 -->
+    <section class="section" id="artifact-2">
+      <h2>Artifact 2: Algorithms and Data Structures</h2>
+
+      <div class="card">
+        <p>
+          The artifact selected for this enhancement is a MongoDB-based dashboard application originally created during my CS 340 coursework.
+          The project uses a MongoDB database containing animal shelter outcome data and a Python-based application layer to query and display
+          filtered results. The artifact was originally developed to demonstrate basic CRUD functionality and database interaction. For this
+          milestone, the artifact was enhanced to focus specifically on query execution behavior, algorithmic efficiency, and the impact of data
+          structures such as indexes on performance.
+        </p>
+
+        <p>
+          I selected this artifact for my ePortfolio because it provides a clear and practical demonstration of algorithmic principles applied
+          in a real-world database context. While the application itself is relatively simple, the underlying query behavior highlights important
+          concepts related to algorithms and data structures, including linear search, indexing, and performance trade-offs.
+        </p>
+
+        <p>
+          The enhancement focused on analyzing how MongoDB executes queries when an index is not present. Using MongoDB Compass, I executed a
+          filtered query on the <code>animal_type</code> field and examined the resulting execution plan. The explain plan showed a collection scan
+          (COLLSCAN), meaning every document in the collection was examined to locate matching results. This behavior directly reflects a linear
+          search algorithm, where time complexity increases proportionally with dataset size.
+        </p>
+
+        <p>
+          This artifact showcases my ability to analyze algorithmic efficiency, interpret execution metrics, and evaluate how data structures such
+          as indexes can significantly improve performance. By identifying the absence of an index and observing its effect on query execution,
+          the artifact was improved from a basic database interaction into a meaningful demonstration of algorithm and data structure concepts.
+        </p>
+
+        <p>
+          Enhancing this artifact reinforced the connection between theoretical algorithm concepts and practical implementation. Reviewing the explain
+          plan made it clear that fundamental principles such as linear search and indexing still apply, even when a database abstracts the low-level
+          mechanics. One challenge during this process was configuring the local MongoDB environment correctly, particularly managing authentication
+          and service settings. Troubleshooting these issues strengthened my understanding of system configuration and tool usage.
+        </p>
+
+        <div class="summary">
+          <h3>Narrative Summary</h3>
+          <p>
+            This enhancement demonstrates how algorithmic behavior shows up in real database queries. By reviewing MongoDB execution output, I was able
+            to connect a collection scan (COLLSCAN) to a linear search pattern, then show how indexes function as a data structure that improves performance.
+            The key learning was seeing how time and resource usage scale when queries cannot use an index.
+          </p>
+          <ul>
+            <li><strong>Skills demonstrated:</strong> execution plan analysis, performance reasoning, indexing as a data structure</li>
+            <li><strong>Evidence:</strong> explain-plan screenshot and the milestone narrative</li>
+          </ul>
+        </div>
+
+        <!-- Evidence Screenshot -->
+        <div class="evidence">
+          <h3 style="margin-bottom: 6px;">Evidence</h3>
+          <figure>
+            <img class="screenshot"
+                 src="assets/explain-plan-collscan.png"
+                 alt="MongoDB explain plan showing COLLSCAN">
+            <figcaption>
+              MongoDB explain plan output showing a COLLSCAN, demonstrating linear-scan behavior when an index is not present.
+            </figcaption>
+          </figure>
+        </div>
+
+        <ul>
+          <li>
+            <strong>Milestone Three Narrative (DOCX):</strong>
+            <a href="documents/Module%204%20Milestone%203%20narrative.docx" target="_blank" rel="noopener noreferrer">
+              View Narrative
+            </a>
+          </li>
+        </ul>
+
+        <a class="toplink" href="#top">Back to top ↑</a>
+      </div>
+    </section>
+
+    <hr>
+
+    <!-- ARTIFACT 3 -->
+    <section class="section" id="artifact-3">
+      <h2>Artifact 3: Databases</h2>
+
+      <div class="card">
+        <p>
+          The artifact selected for this enhancement is an Animal Shelter Dashboard originally created for CS 340. The original version demonstrated
+          basic CRUD operations using MongoDB and displayed animal shelter data through a Python-based dashboard. For CS 499, this artifact was enhanced
+          to better demonstrate database design principles, secure data access, and efficient data retrieval practices.
+        </p>
+
+        <p>
+          The enhanced artifact consists of two primary components:
+        </p>
+        <ul>
+          <li><strong>MongoDB CRUD module</strong> (<code>CRUD_Python_Module.py</code>) that encapsulates database operations.</li>
+          <li><strong>Dash-based interactive dashboard</strong> (Jupyter notebook) that retrieves, displays, and visualizes database records.</li>
+        </ul>
+
+        <p>
+          This artifact was selected for inclusion in my ePortfolio because it demonstrates my ability to design, implement, and enhance database-driven
+          applications. It showcases practical database skills applicable to real-world development, including secure connections, structured data access,
+          and performance-aware querying.
+        </p>
+
+        <div class="summary">
+          <h3>Narrative Summary</h3>
+          <p>
+            This enhancement focused on database practices that improve security, performance, and maintainability. I isolated database operations into a
+            dedicated CRUD layer, validated connectivity early, and improved retrieval efficiency using projection and limiting. These changes demonstrate
+            how database design decisions affect application behavior and scalability.
+          </p>
+          <ul>
+            <li><strong>Skills demonstrated:</strong> database abstraction, secure access patterns, performance-aware querying</li>
+            <li><strong>Evidence:</strong> indexes screenshot and the milestone narrative</li>
+          </ul>
+        </div>
+
+        <div class="grid">
+          <div>
+            <h3 style="margin-top: 0;">Key Database Enhancements</h3>
+            <ul>
+              <li><strong>Centralized CRUD abstraction:</strong> database access isolated behind a dedicated class for maintainability and scalability.</li>
+              <li><strong>Secure MongoDB authentication:</strong> authenticated connection with connectivity validation at startup.</li>
+              <li><strong>Efficient data retrieval:</strong> field projection and result limiting to reduce overhead and improve scalability.</li>
+              <li><strong>Interactive visualization:</strong> filterable table and map visualization tied to database records.</li>
+            </ul>
+          </div>
+          <div>
+            <h3 style="margin-top: 0;">What I Learned</h3>
+            <p>
+              Enhancing this artifact reinforced how database-level design decisions impact application performance and usability. Implementing projections
+              and limits highlighted the importance of retrieving only the data an application needs. A major challenge was diagnosing and resolving
+              authentication and connection issues, which strengthened my understanding of MongoDB security configuration and the value of validating
+              connectivity early in the application lifecycle.
+            </p>
+            <p class="small muted">
+              <strong>Evidence:</strong> Screenshot(s) referenced in the Milestone Four narrative.
+            </p>
+          </div>
+        </div>
+
+        <!-- Evidence Screenshot -->
+        <div class="evidence">
+          <h3 style="margin-bottom: 6px;">Evidence</h3>
+          <figure>
+            <img class="screenshot"
+                 src="assets/mongodb-indexes-view.png"
+                 alt="MongoDB indexes view for animals collection">
+            <figcaption>
+              MongoDB indexes view for the animals collection, demonstrating the data structure support used for efficient query performance.
+            </figcaption>
+          </figure>
+        </div>
+
+        <ul>
+          <li>
+            <strong>Milestone Four Narrative (DOCX):</strong>
+            <a href="documents/CS%20499%20Milestone%20Four%20Narrative.docx" target="_blank" rel="noopener noreferrer">
+              View Narrative
+            </a>
+          </li>
+        </ul>
+
+        <a class="toplink" href="#top">Back to top ↑</a>
+      </div>
+    </section>
+
+    <hr>
+
+    <section class="section" id="milestones">
+      <h2>Milestone Documents</h2>
+      <p class="small muted">
+        These are the submitted milestone documents included for reference.
+      </p>
       <ul>
         <li>
-          <strong>Milestone Four Narrative (DOCX):</strong>
+          <a href="documents/Module%203%20Milestone%202%20narrative.docx" target="_blank" rel="noopener noreferrer">
+            Milestone Two: Software Design and Engineering
+          </a>
+        </li>
+        <li>
+          <a href="documents/Module%204%20Milestone%203%20narrative.docx" target="_blank" rel="noopener noreferrer">
+            Milestone Three: Algorithms and Data Structures
+          </a>
+        </li>
+        <li>
           <a href="documents/CS%20499%20Milestone%20Four%20Narrative.docx" target="_blank" rel="noopener noreferrer">
-            View Narrative
+            Milestone Four: Databases
           </a>
         </li>
       </ul>
-    </div>
-  </section>
 
-  <hr>
+      <a class="toplink" href="#top">Back to top ↑</a>
+    </section>
 
-  <section class="section" id="milestones">
-    <h2>Milestone Documents</h2>
-    <p class="small muted">
-      These are the submitted milestone documents included for reference.
-    </p>
-    <ul>
-      <li>
-        <a href="documents/Module%203%20Milestone%202%20narrative.docx" target="_blank" rel="noopener noreferrer">
-          Milestone Two: Software Design and Engineering
-        </a>
-      </li>
-      <li>
-        <a href="documents/Module%204%20Milestone%203%20narrative.docx" target="_blank" rel="noopener noreferrer">
-          Milestone Three: Algorithms and Data Structures
-        </a>
-      </li>
-      <li>
-        <a href="documents/CS%20499%20Milestone%20Four%20Narrative.docx" target="_blank" rel="noopener noreferrer">
-          Milestone Four: Databases
-        </a>
-      </li>
-    </ul>
-  </section>
+  </main>
 
 </body>
 </html>
