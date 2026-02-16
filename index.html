@@ -49,6 +49,24 @@
       margin-right: 6px;
       margin-bottom: 6px;
     }
+
+    /* Screenshot styling */
+    .evidence { margin-top: 14px; }
+    .screenshot {
+      width: 100%;
+      max-width: 900px;
+      border: 1px solid #ddd;
+      border-radius: 10px;
+      background: #fff;
+      display: block;
+      margin-top: 10px;
+    }
+    figure { margin: 10px 0 0 0; }
+    figcaption {
+      font-size: 0.92rem;
+      color: #444;
+      margin-top: 6px;
+    }
   </style>
 </head>
 <body>
@@ -198,6 +216,19 @@
         <span class="tag">Documentation</span>
       </div>
 
+      <!-- Evidence Screenshot -->
+      <div class="evidence">
+        <h3 style="margin-bottom: 6px;">Evidence</h3>
+        <figure>
+          <img class="screenshot"
+               src="assets/dashboard-main-view.png"
+               alt="Animal Shelter Dashboard (main view)">
+          <figcaption>
+            Animal Shelter Dashboard: main view showing the interactive table and map visualization.
+          </figcaption>
+        </figure>
+      </div>
+
       <ul>
         <li>
           <strong>Original Artifact (ZIP):</strong>
@@ -262,10 +293,18 @@
         and service settings. Troubleshooting these issues strengthened my understanding of system configuration and tool usage.
       </p>
 
-      <p class="small muted">
-        <strong>Evidence:</strong> Figures referenced in my Milestone Three narrative (filtered query without index, index view, and explain plan output).
-        (Screenshots are included in the repository under <code>assets/algorithms/</code>.)
-      </p>
+      <!-- Evidence Screenshot -->
+      <div class="evidence">
+        <h3 style="margin-bottom: 6px;">Evidence</h3>
+        <figure>
+          <img class="screenshot"
+               src="assets/explain-plan-collscan.png"
+               alt="MongoDB explain plan showing COLLSCAN">
+          <figcaption>
+            MongoDB explain plan output showing a COLLSCAN, demonstrating linear-scan behavior when an index is not present.
+          </figcaption>
+        </figure>
+      </div>
 
       <ul>
         <li>
@@ -329,6 +368,19 @@
         </div>
       </div>
 
+      <!-- Evidence Screenshot -->
+      <div class="evidence">
+        <h3 style="margin-bottom: 6px;">Evidence</h3>
+        <figure>
+          <img class="screenshot"
+               src="assets/mongodb-indexes-view.png"
+               alt="MongoDB indexes view for animals collection">
+          <figcaption>
+            MongoDB indexes view for the animals collection, demonstrating the data structure support used for efficient query performance.
+          </figcaption>
+        </figure>
+      </div>
+
       <ul>
         <li>
           <strong>Milestone Four Narrative (DOCX):</strong>
@@ -348,6 +400,7 @@
       These are the submitted milestone documents included for reference.
     </p>
     <ul>
+      <li>
         <a href="documents/Module%203%20Milestone%202%20narrative.docx" target="_blank" rel="noopener noreferrer">
           Milestone Two: Software Design and Engineering
         </a>
